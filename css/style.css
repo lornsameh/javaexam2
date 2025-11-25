@@ -1,0 +1,169 @@
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  margin: 0;
+  background-color: rgba(217, 199, 175, 0.567);
+}
+
+
+
+
+
+
+
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #FF3D00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+.main-loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: all 1s ease;
+  pointer-events: all;
+}
+
+.main-loader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+  background-color: #232323;
+  left: 0;
+  transition: all 0.7s ease;
+  width: 320px;
+  z-index: 999;
+}
+
+.nav-move{
+  left: -255px;
+}
+
+.left{
+  transform: translateX(-70px);
+  opacity: 0;
+}
+
+.right{
+  transform: translateX(70px);
+  opacity: 0;
+}
+
+.links button{
+  transition: all 0.6s 0.2s ease;
+}
+
+.links button:hover{
+  color: #FF3D00;
+}
+
+.navbar-icons{
+  background-color: #F1F1F1;
+  width: 20%;
+}
+
+.navbar-links button{
+  color: #F1F1F1;
+}
+
+.humberger-icon i {
+  transform: rotate(0deg);
+  transition: all 0.5s ease;
+}
+
+.humberger-icon.active i {
+  transform: rotate(90deg);
+}
+
+
+
+
+
+.meal-name{
+  background-color: rgba(249, 246, 246, 0.792);
+  transition: all 0.8s ease;
+  transform: translateY(100%);
+}
+
+.meal:hover .meal-name{
+  transform: translateY(0);
+}
+
+
+
+
+
+.text-danger {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #dc3545; /* أحمر bootstrap */
+    font-weight: 500;
+    background-color: #ffe5e5;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+input.is-valid {
+    border-color: #28a745 !important; /* أخضر */
+}
+input.is-invalid {
+    border-color: #dc3545 !important; /* أحمر */
+}

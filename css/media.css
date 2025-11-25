@@ -1,0 +1,38 @@
+/* extra small */
+@media  (max-width: 576px){
+    .Display{
+        margin-left: 60px;
+    }
+}
+
+/* sm */
+@media (min-width: 576px) and (max-width: 768px) {
+    .Display{
+        margin-left: 60px;
+    }
+}
+
+
+/* md */
+@media (min-width: 768px) and (max-width: 992px) {
+    .Display{
+        margin-left: 60px;
+    }
+}
+
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .Display{
+        margin-left: 60px;
+    }
+}
+
+
+/* xl */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .Display{
+        margin-left: 60px;
+    }
+
+}
